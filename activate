@@ -27,3 +27,12 @@ fi
 alias isaaclab="${SCRIPT_ROOT}/third_party/IsaacLab/isaaclab.sh"
 alias python="${SCRIPT_ROOT}/third_party/IsaacLab/isaaclab.sh -p"
 alias pip="${SCRIPT_ROOT}/third_party/IsaacLab/isaaclab.sh -p -m pip"
+
+# Deactivate func
+deactivate() {
+    unalias isaaclab
+    unalias python
+    unalias pip
+    unset ISAACSIM_PATH
+    unset ISAACSIM_PYTHON_EXE
+}
